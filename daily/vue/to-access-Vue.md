@@ -424,8 +424,58 @@
       })
     }
   })
-
   ```
+  比如实现一个列表：
+
+  ``` javascript
+  var a = new Vue({
+    el: 'violaTest',
+    data: {
+      test: 123,
+      myAttrs: {
+        id: 5, test: 'test', move: 'remove me'
+      },
+      myStyle: {
+        color: '#ffffff',
+              backgroundColor: 'red',
+              width: '50px',
+              height: '100px',
+              marginBottom: '10px'
+      }
+    },
+    methods: {
+      clickHandler (e, num) {
+        console.log('vue click', this, e, num)
+      }
+    },
+    render (h) {
+      var data = [1, 5, 6, 45, 82, 11]
+      var vm = this
+      var _l = vm._l,
+          _s = vm._s,
+          _c = vm._c,
+          _v = vm._v
+          
+      return _c('div',{ 
+        style: {'flex-direction': 'column'} 
+        }, 
+        _l((data),function(key){
+          return _c('div', {
+              style: vm.myStyle,
+              on:{ 
+                "click": function($event) {
+                  vm.clickHandler($event, key)
+                }
+              }
+            },
+            [_v(" "+_s(key)+" ")])
+          }
+        )
+      )
+    }
+  })
+  ```
+
 ## 对于 `SFC` 单文件还需要做的事情
 
 - 模板编译代码进行构建出来一个编译器 `template-compiler`
