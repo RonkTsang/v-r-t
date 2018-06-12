@@ -1,6 +1,6 @@
 # when should we `callNative` ☎ ？
 
-## Intro
+## 问题
 
   `Viola-web` 端通过 `callNative` 方法与 `Viola-Native` 通讯，其中包括有对 virtual dom 的增删改操作
 
@@ -72,7 +72,7 @@
   
   因此这个东西是不是就会造成一个通讯过多的问题？
 
-## How to resolve ?
+## 解决
 
   ### **参考 `weex`**
   
@@ -116,4 +116,16 @@
       - 缺点：每个都需要 `created` 钩子，那不也是频繁通讯了吗？
     - 动态判断
 
-      做法：
+      先将 `document` 的状态初始值为 `isNatived = true`
+
+      如果 `node.appendChild(child)` 中 `node` 存在于 native 中，那么加入的 `child` 一整课子树应该更新为 `isNatived = true`
+
+      这个更新过程中，如果碰到 其中一个 child 的 `isNatived` 为 `true`，则不必遍历该子树，因为它的子节点的状态已经是被更新过的了
+
+      此外，在 Vue 的 `node-ops` 中的 `appendChild` 函数中，当 `node.appendChild(child)` 时，就算 `node` 不在 native 中，我们也可以直接将 `child` 更新 `isNatived = true`，因为既然走到这一步了，就意味着这个节点是要被加入 native 中的。
+
+      当 new Vue 的 `appendChild` 走到 `document` 时，因为 `document` 的状态初始值为 `isNatived = true`，此时则将一整 dom tree 进行 `callNative` 操作
+
+  当前采用的方案是 **动态判断**
+
+  保底方案：`weex` 的做法
