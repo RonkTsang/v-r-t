@@ -1,5 +1,13 @@
 # when should we `callNative` ☎ ？
+<!-- TOC -->
 
+- [when should we `callNative` ☎ ？](#when-should-we-callnative)
+  - [问题](#)
+  - [解决](#)
+    - [**参考 `weex`**](#weex)
+    - [**思考的解决思路**](#)
+
+<!-- /TOC -->
 ## 问题
 
   `Viola-web` 端通过 `callNative` 方法与 `Viola-Native` 通讯，其中包括有对 virtual dom 的增删改操作
