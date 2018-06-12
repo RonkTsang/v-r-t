@@ -18,7 +18,7 @@
   
     ``` javascript
     var div
-    document.body.appendChild((div = new Element('div)))
+    document.body.appendChild((div = new Element('div')))
     ```
     其实 `appendChild` 底层将会调用：
 
