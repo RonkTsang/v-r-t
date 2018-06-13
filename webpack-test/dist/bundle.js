@@ -6612,8 +6612,9 @@ function updateClass (oldVnode, vnode) {
   
   for (const key in styles) {
     if (styles.hasOwnProperty(key)) {
-      const s = styles[key]
-      el.style[key] = s + 'px'
+      let s = styles[key]
+      if (!isNaN(parseInt(s))) s += 'px'
+      el.style[key] = s
     }
   }
   // handle transition classes
