@@ -1,29 +1,34 @@
 <template>
 
-  <div class="viola">
-    <p> hello {{ text }} </p>
+  <div class="viola test" :class="dynamic ? 'hh': ''" disabled>
+    <p class="p"> hello {{ text }} </p>
   </div>
 </template>
 <script>
   export default {
     data () {
       return {
-        text: 'viola'
+        text: 'viola',
+        dynamic: true
       }
     }
   }
 </script>
 <style scoped lang="scss">
-  .weex {
+  .viola {
     background-color: rgb(77, 69, 190);
     transform: scale(1.5);
 
     .p {
       color: blue;
     }
+
+    &[type=oj] {
+      color: red
+    }
   }
 
-  .weex:hover {
+  .viola:hover {
     width: 300
   }
 
