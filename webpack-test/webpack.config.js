@@ -12,17 +12,18 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'source-map',
-  // mode: 'none',
-  mode: 'production',
+  node: false,  // 关闭 webpack 对 node api接口的 polyfill
+  mode: 'none',
+  // mode: 'production',
   module: {
     rules: [
       {
         test: /\.vue$/,
-        // loader: 'vue-loader',
+        loader: 'vue-loader',
         // options: {
         //   shadowMode: true
         // }
-        loader: 'weex-vue-loader'
+        // loader: 'weex-vue-loader'
       },
       // {
       //   test: /\.css$/,

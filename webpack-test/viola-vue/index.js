@@ -6442,8 +6442,9 @@ function updateClass (oldVnode, vnode) {
   if (cls == oldCls) { return }
 
   var classList = cls.split(' ');
-  el.test = getStyle(classList, vnode);
-  el.setAttrs({'class': cls});
+  var classStyle = getStyle(classList, vnode);
+  el.setStyle(classStyle);
+  el.setAttrs({ 'class': cls });
   // const oldClassList = makeClassList(oldData)
   // const classList = makeClassList(data)
 
@@ -6461,7 +6462,7 @@ function updateClass (oldVnode, vnode) {
   // }
 }
 
-function getStyle(classList, vnode) {
+function getStyle (classList, vnode) {
   var res = {},
     stylesheet = vnode.context.$options._stylesheet;
   classList.reduce(function (res, className) {
@@ -6469,22 +6470,27 @@ function getStyle(classList, vnode) {
     if (styleDescriptor) {
       extend(res, styleDescriptor.style);
       // todo attr selector
-      if (stylesheet.attrs) {
-        var vnodeAttr = vnode.data.attrs;
-        if (isEmptyObj(vnodeAttr))
-        { for (var k in attrStyle) {
-          if (isDef(vnodeAttr[k])) {
-            var value = attrStyle[k];
-            console.log('有属性样式~~', vnodeAttr[k], value);
+      if (styleDescriptor.attrs) {
+        var attrStyle = styleDescriptor.attrs,
+          vnodeAttr = vnode.data.attrs;
+        if (isEmptyObj(vnodeAttr)) { return }
+        for (var k in attrStyle) {
+          var vnodeAttrVal = vnodeAttr[k];
+            // attrStyleCollection = attrStyle[k]
+          if (isDef(vnodeAttrVal)) {
+            var attrStyleVal = attrStyle[k];
+            var attrStyleObj = vnodeAttrVal === '' ? attrStyleVal : attrStyleVal[vnodeAttrVal];
+            extend(res, attrStyleObj);
+            // console.log('有属性样式~~', vnodeAttr[k], value)
           }
-        } }
+        }
       }
     }
   }, res);
   return res
 }
 
-function isEmptyObj(obj) {
+function isEmptyObj (obj) {
   for (var key in obj) {
     return false
   }

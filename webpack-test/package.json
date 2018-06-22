@@ -4,7 +4,7 @@
   "description": "webpack test",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --debug --config webpack.config.js"
+    "test": "webpack --display-modules --display-reasons --debug --config webpack.config.js"
   },
   "author": "ronkTsang",
   "license": "ISC",
