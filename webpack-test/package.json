@@ -9,6 +9,8 @@
   "author": "ronkTsang",
   "license": "ISC",
   "dependencies": {
+    "buble": "^0.19.3",
+    "buble-loader": "^0.5.1",
     "deep-extend": "^0.5.1",
     "vue": "^2.5.16"
   },
@@ -16,12 +18,15 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "css-loader": "^0.28.11",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
     "vue-loader": "^14.2.3",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.4",
-    "weex-loader": "^0.7.7"
+    "weex-loader": "^0.7.7",
+    "wrapper-webpack-plugin": "^2.0.0"
   }
 }
