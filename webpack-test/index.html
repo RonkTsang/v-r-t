@@ -5,7 +5,13 @@
   <title>Demo</title>
 </head>
 <body>
-  <div id="app"></div>  <!-- Vue模板入口 -->
-  <script src="./dist/bundle.js"></script>
+  <div id="root">
+    <div id="tree_container"></div>
+  </div>
+  
+  <script src="<%= htmlWebpackPlugin.files.chunks.env.entry %>"></script>
+  <script src="/Viola.js"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.ctx.entry %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.bundle.entry %>"></script>
 </body>
 </html>

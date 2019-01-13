@@ -1,13 +1,19 @@
 <template>
   <richtext
+    style="font-size: 16dp;"
+    :style="lines ? { lines } : {}"
     @click="textClick"
     >
+
+    <!-- <span v-if="prefix">{{ prefix }}</span> -->
+
     <template v-for="(item, i) in biuList">
       
       <!-- @nick -->
       <span
-        v-if="item.nick"
+        v-if="item.nick && !!item.nick.trim()"
         :key="i"
+        style="color: #285c95;"
         @click.stop="nickClick(item)"
       >
         {{ '@' + item.nick }}
@@ -63,6 +69,11 @@
 
   export default {
     props: ['biuLevelList'],
+    data () {
+      return {
+        lines: 3
+      }
+    },
     computed: {
       biuList () {
         let biuList = [], list = this.biuLevelList

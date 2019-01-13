@@ -9,12 +9,13 @@ module.exports = {
   devtool: 'source-map',
   node: false,  // 关闭 webpack 对 node api接口的 polyfill
   mode: 'none',
+  // mode: 'development',
   // mode: 'production',
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: '@tencent/viola-vue-loader',
         options: {
           buble: {}
         }

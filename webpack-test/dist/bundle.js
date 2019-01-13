@@ -90,14 +90,32 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _richtext_richtext_event_muti_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _class_base_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+// style
+// import hello from './style_test/cmp/deep_index.vue'
+// import hello from './style_test/cmp/cmp_index.vue'
+// import hello from './style_test/cmp/richtext_index_blank.vue'
+// import hello from './style_test/cmp/blank_sub_index.vue'
+// import hello from './style_test/v_if_update.vue'
+
+// events
+// import hello from './events/bubble.vue'
+// import hello from './events/richtext.vue'
+
+// v-model
+// import hello from './v-model/base.vue'
+
+// class
 
 
+// list
+// import hello from './list/refreshAndFooter.vue'
 
 new Vue({
   el: '#app',
-  components: { hello: _richtext_richtext_event_muti_vue__WEBPACK_IMPORTED_MODULE_0__["default"] },
-  render: (h) => h(_richtext_richtext_event_muti_vue__WEBPACK_IMPORTED_MODULE_0__["default"])
+  components: { hello: _class_base_vue__WEBPACK_IMPORTED_MODULE_0__["default"] },
+  render: (h) => h(_class_base_vue__WEBPACK_IMPORTED_MODULE_0__["default"])
 })
 
 /***/ }),
@@ -106,9 +124,10 @@ new Vue({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _buble_loader_node_modules_vue_loader_lib_selector_type_script_index_0_richtext_event_muti_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_3d6f2b6a_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_richtext_event_muti_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+/* harmony import */ var _buble_loader_viola_tgit_Viola_vue_loader_lib_selector_type_script_index_0_base_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* empty/unused harmony star reexport *//* harmony import */ var _viola_tgit_Viola_vue_loader_lib_template_compiler_index_id_data_v_b3371b8a_hasScoped_false_optionsId_0_buble_transforms_viola_tgit_Viola_vue_loader_lib_selector_type_template_index_0_base_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _viola_tgit_Viola_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+var injectStyle = __webpack_require__(2)
 /* script */
 
 
@@ -117,28 +136,45 @@ __webpack_require__.r(__webpack_exports__);
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 
-var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _buble_loader_node_modules_vue_loader_lib_selector_type_script_index_0_richtext_event_muti_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_3d6f2b6a_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_richtext_event_muti_vue__WEBPACK_IMPORTED_MODULE_1__["render"],
-  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_3d6f2b6a_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_richtext_event_muti_vue__WEBPACK_IMPORTED_MODULE_1__["staticRenderFns"],
+var Component = Object(_viola_tgit_Viola_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _buble_loader_viola_tgit_Viola_vue_loader_lib_selector_type_script_index_0_base_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  _viola_tgit_Viola_vue_loader_lib_template_compiler_index_id_data_v_b3371b8a_hasScoped_false_optionsId_0_buble_transforms_viola_tgit_Viola_vue_loader_lib_selector_type_template_index_0_base_vue__WEBPACK_IMPORTED_MODULE_1__["render"],
+  _viola_tgit_Viola_vue_loader_lib_template_compiler_index_id_data_v_b3371b8a_hasScoped_false_optionsId_0_buble_transforms_viola_tgit_Viola_vue_loader_lib_selector_type_template_index_0_base_vue__WEBPACK_IMPORTED_MODULE_1__["staticRenderFns"],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\richtext\\richtext_event_muti.vue"
+Component.options.__file = "src\\class\\base.vue"
 
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "test": {
+    "style": {
+      "custom": "div",
+      "backgroundColor": "black"
+    },
+    "scoped_id": "",
+    "state": {},
+    "attrs": {},
+    "children": []
+  }
+}
+
+/***/ }),
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -147,90 +183,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
+/* harmony default export */ __webpack_exports__["default"] = ({
 
-  /* 
-
-    混合用例
-
-    <richtext> 和 <span> 绑定事件， <span> 的事件动态更改
-
-    测试：<richtext> 收集并分发是否正确
-
-    list item结构：
-
-      type = 1 : 增加 click 事件，事件对象为 当前 item
-
-  */
-
-  /* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data () {
-      return {
-        textList: [
-          { type: 1, text: 'text1' },
-          { type: 2, text: 'text2' },
-          { type: 1, text: 'text3' },
-          { type: 4, text: 'text4' } ]
-      }
-    },
-    created: function created () {
-      var this$1 = this;
-
-      // e: {
-      //   index: [1, 2, 6]
-      // }
-      var count = 1
-      viola.on('update', function (e) {
-        console.log('update')
-        var _list = [], evList = e.index || []
-        var max = evList.length ? Math.max.apply(null, evList) : 0
-        var loop = (max > 3) ? max + 1 : 4
-        for (var index = 0; index < loop; index++) {
-          _list.push({
-            type: evList.includes(index) ? 1 : 0,
-            text: (count + " times update: " + index)
-          })
-        }
-        count++
-        this$1.textList = _list
-      })
-    },
-		methods: {
-      nickClick: function nickClick (info) {
-        console.log(info.text)
-      },
-      textClick: function textClick () {
-        console.log('textClick')
-      }
-		}
-  });
+});
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -241,32 +201,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "richtext",
-    { on: { click: _vm.textClick } },
-    [
-      _vm._l(_vm.textList, function(item, i) {
-        return [
-          item.type == 1
-            ? _c(
-                "span",
-                {
-                  key: i,
-                  on: {
-                    click: function($event) {
-                      $event.stopPropagation()
-                      _vm.nickClick(item)
-                    }
-                  }
-                },
-                [_vm._v(_vm._s(item.text))]
-              )
-            : _c("span", { key: i }, [_vm._v(_vm._s(item.text))])
-        ]
-      })
-    ],
-    2
-  )
+  return _c("div", { staticClass: "test" })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -274,7 +209,7 @@ render._withStripped = true
 if (false) {}
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -328,59 +263,7 @@ function normalizeComponent (
 
   // a style object
   options._stylesheet = injectStyles
-  
-  /* 样式加载函数 */
-  // var hook
-  // if (moduleIdentifier) { // server build
-  //   hook = function (context) {
-  //     // 2.3 injection
-  //     context =
-  //       context || // cached call
-  //       (this.$vnode && this.$vnode.ssrContext) || // stateful
-  //       (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-  //     // 2.2 with runInNewContext: true
-  //     if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-  //       context = __VUE_SSR_CONTEXT__
-  //     }
-  //     // inject component styles
-  //     if (injectStyles) {
-  //       injectStyles.call(this, context)
-  //     }
-  //     // register component module identifier for async chunk inferrence
-  //     if (context && context._registeredComponents) {
-  //       context._registeredComponents.add(moduleIdentifier)
-  //     }
-  //   }
-  //   // used by ssr in case component is cached and beforeCreate
-  //   // never gets called
-  //   options._ssrRegister = hook
-  // } else if (injectStyles) {
-  //   hook = shadowMode
-  //     ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-  //     : injectStyles
-  // }
 
-  /* 将 样式加载 放入了回调钩子了 */
-  // if (hook) {
-  //   console.log('n options： ', options)
-  //   if (options.functional) {
-  //     // for template-only hot-reload because in that case the render fn doesn't
-  //     // go through the normalizer
-  //     options._injectStyles = hook
-  //     // register for functioal component in vue file
-  //     var originalRender = options.render
-  //     // options.render = function renderWithStyleInjection (h, context) {
-  //     //   hook.call(context)
-  //     //   return originalRender(h, context)
-  //     // }
-  //   } else {
-  //     // inject component registration as beforeCreate hook
-  //     var existing = options.beforeCreate
-  //     options.beforeCreate = existing
-  //       ? [].concat(existing, hook)
-  //       : [hook]
-  //   }
-  // }
 
   return {
     exports: scriptExports,

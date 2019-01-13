@@ -6,6 +6,10 @@
       :biuLevelList="cl"
       @nickClick="nickClick"
       @textClick="textClick"
+      style="color: blue;"
+      :style="{
+        dynStyle: 1
+      }"
     />
   </div>
 </template>
@@ -26,12 +30,12 @@ import biuText from './biuText.vue'
     },
     created() {
       viola.on('update', (e) => {
-        if (e.updateList) {
+        if (e.updateList === 1) {
           // span 无事件
           this.commentLists = [
             [{biuLevel_comment: '纯文本'}]
           ] 
-        } else {
+        } else if (e.updateList === 2){
 
           // 更新为 两个 事件
           this.commentLists = [
@@ -41,17 +45,14 @@ import biuText from './biuText.vue'
               {biuLevel_comment: '更新了', biuLevel_nick: '嘻嘻更新了', biuLevel_uin: '1004474277 更新了'},
             ]
           ]
+        } else {
+          this.commentLists = [[{biuLevel_comment: '有文本', biuLevel_nick: 'ronktsang', biuLevel_uin: '1037568810'},{biuLevel_comment: '噢噢', biuLevel_nick: '嘻嘻', biuLevel_uin: '1004474277'}]]
         }
       })
     },
     data () {
       return {
-        commentLists: [
-          [
-            {biuLevel_comment: '有文本', biuLevel_nick: 'ronktsang', biuLevel_uin: '1037568810'},
-            {biuLevel_comment: '噢噢', biuLevel_nick: '嘻嘻', biuLevel_uin: '1004474277'}
-          ]
-        ] 
+        commentLists: [[{biuLevel_comment: '有文本', biuLevel_nick: 'ronktsang', biuLevel_uin: '1037568810'},{biuLevel_comment: '噢噢', biuLevel_nick: '嘻嘻', biuLevel_uin: '1004474277'}]]
       }
     },
     methods: {

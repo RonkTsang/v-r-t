@@ -1,0 +1,9 @@
+#tree_container {
+  width: 80%;
+  margin-left: 10%;
+  transition: transform .5s;
+}
+
+#tree_container.left {
+  transform: translateX(-200px);
+}
